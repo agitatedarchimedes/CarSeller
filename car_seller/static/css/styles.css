@@ -1,0 +1,91 @@
+:root {
+  --main-bg-color: rgb(240,241,246);
+  --main-text-color: rgb(198, 213, 255);
+  --main-text-secondary-color: rgb(132, 139, 158);
+  --main-header-width: 200px;
+}
+
+body {
+    font: 16px/150% 'Roboto', sans-serif;
+    background-color: var(--main-bg-color);
+}
+
+header {
+    box-sizing: content-box;
+    color: var(--main-text-color);
+    background-color: rgb(40, 58, 114);
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .2);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow:auto;
+    padding: 20px 0 0 0;
+    width: var(--main-header-width);
+}
+header nav {
+    margin-left: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header h3 {
+    color: var(--main-text-secondary-color);
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+header > nav li {
+    margin-top: .5em;
+}
+
+a {
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+a :active {
+
+}
+
+a :hover {
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+
+aside {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 300px;
+    bottom: 0;
+}
+
+.logo {
+    padding: 1em;
+}
+
+/* ========================================== */
+/* PAGE CONTENT ============================= */
+/* ========================================== */
+
+.content {
+    --padding-value: 24px;
+    box-sizing: border-box;
+    position: relative;
+    left: var(--main-header-width);
+    width: calc(100vw - var(--main-header-width));
+    padding: var(--padding-value);
+    min-height: calc (100vh - 2  * var(--padding-value));
+}

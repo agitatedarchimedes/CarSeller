@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link id="favicon" rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link rel="stylesheet" href="static/css/reset.css" />
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <title>{% block title %}{% endblock %} - Car sellere</title>
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="/">Car seller</a></h1>
+            {% include "nav.html" %}
+        </nav>
+    </header>
+
+    <section class="content">
+        {% block content %}{% endblock %}
+    </section>
+
+    <footer>
+        &copy; Copyright 2008 by <a href="http://domain.invalid/">you</a>.
+    </footer>
+</body>
+</html>
